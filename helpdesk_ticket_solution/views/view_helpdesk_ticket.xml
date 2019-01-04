@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="test1234" model="ir.ui.view">
+            <field name="name">test1234</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="priority">16</field>
+            <field name="inherit_id" ref="helpdesk_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_timesheet" />
+            <field name="arch" type="xml">
+            	<data>
+                <xpath expr="//notebook"
+                    position="inside">
+                        <page string="Solution or Response" name="solution_page">
+                            <field name="solution" colspan="4"
+                                nolabel="1" />
+                        </page>
+                </xpath>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_helpdesk_ticket_totals_sold" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.totals</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            <field name="deadline" position="after">
+				<label for="monthly_hours_contract" string="Contract hours"/>
+				<div>
+				     <field name="monthly_hours_spend" class="oe_inline"/> of <field name="monthly_hours_contract" class="oe_inline"/> used
+				 </div>
+				 <field name="monthly_hours_left" class="oe_inline" style="color:red;" attrs="{'invisible': [('monthly_hours_left', '>', 0)]}"/>               	
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="project_overview">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.external_layout">
+          <div class="page">
+            <style type="text/css">
+                table {
+                    margin: 1.5px;
+                    border: 1px solid black;
+                    }
+                tr {
+                    border: 1px solid black;
+                    }
+                td {
+                    padding: 5px;
+                    border: 1px solid black;
+                    }
+                th {
+                    padding: 5px;
+                    border: 1px solid black;
+                    }
+                table.open_tasks{
+                    width: 100%;
+                    }
+                table.project_info{
+                    width: 100%;
+                    }
+                table.open_issues{
+                    width: 100%;
+                    }
+                table.total_hours{
+                    width: 100%;
+                    }
+                table.task_timesheet{
+                    width: 100%;
+                    }
+                table.task_message{
+                    width: 100%;
+                    }
+                table.orders{
+                    width: 100%;
+                    }
+                table.project_totals{
+                    border: none;
+                    }
+                tr.project_totals{
+                    border: none;
+                    }
+                td.project_totals {
+                    border: none;
+                    }
+
+                h2.pagebreak{
+                    page-break-before: always;"
+                    }
+            </style>
+            <table class="project_info">
+              <tr>
+                <td style="width:20%;"><strong>Date</strong></td>
+                <td style="width:30%;"><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%Y %H:%M')"/></td>
+                <td style="width:20%;"><strong>Customer</strong></td>
+                <td style="width:30%;"><span t-field="o.partner_id"/></td>
+              </tr>
+              <tr>
+                <td style="width:20%;"><strong>Project</strong></td>
+                <td style="width:30%;"><span t-field="o.name"/></td>
+                <td style="width:20%;"><strong>Project Manager</strong></td>
+                <td style="width:30%;"><span t-field="o.user_id"/></td>
+              </tr>
+            </table>
+            <div class="intro">
+              <p>
+                <h2>1. Open tasks</h2>
+                A task is a single unit of work – an action to accomplish in a project, a single step in a multi-step project. A task is accomplished by a set deadline, and must contribute toward work-related objectives. 
+              </p>
+            </div>
+            <br></br>
+            <table class="open_tasks">
+              <tr>
+                <th class="bold">ID</th>
+                <th class="bold">Name</th>
+                <th class="bold">Planned Hours</th>
+                <th class="bold">Worked Hours</th>
+                <th class="bold">Stage</th>
+                <th class="bold">KB State</th>
+                <th class="bold">Assigned to</th>
+              </tr>
+              <t t-set="sum_plan_hours" t-value="0.0" />
+              <t t-set="sum_eff_hours" t-value="0.0" />
+              <tr t-foreach="o.task_ids.sorted(key=lambda r: r.stage_id.sequence)" t-as="task" t-if="task.stage_id.fold == False and task.stage_id.backlog_stage == False">
+                  <td><t t-esc="task.id"/></td>
+                  <td><t t-esc="task.name"/></td>
+                  <td align="right"><t t-esc="'%02d:%02d' % (int(float(task.planned_hours)),(float(task.planned_hours)+.01-int(float(task.planned_hours)))*60)"/></td>
+                  <td align="right"><t t-esc="'%02d:%02d' % (int(float(task.effective_hours)),(float(task.effective_hours)+.01-int(float(task.effective_hours)))*60)"/></td>
+                  <td><t t-esc="task.stage_id.name"/></td>
+	              <td>
+	                <t t-if="task.kanban_state == 'done'" t-esc="task.legend_done" />
+	                <t t-if="task.kanban_state == 'normal'" t-esc="task.legend_normal" />
+	                <t t-if="task.kanban_state == 'blocked'" t-esc="task.legend_blocked" />
+	              </td>                  
+                  <td><t t-if="task.stage_id.responsiblity_of_partner != True" t-esc="task.user_id.name"/> <t t-if="task.stage_id.responsiblity_of_partner == True" t-esc="task.partner_id.name"/></td>
+                  <t t-set="sum_plan_hours" t-value="sum_plan_hours+task.planned_hours" />
+                  <t t-set="sum_eff_hours" t-value="sum_eff_hours+task.effective_hours" />
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align: right;text-weight:bold;">Totalen</td>
+                <td align="right"><t t-esc="'%02d:%02d' % (int(float(sum_plan_hours)),(float(sum_plan_hours)+.01-int(float(sum_plan_hours)))*60)"/></td>
+                <td align="right"><t t-esc="'%02d:%02d' % (int(float(sum_eff_hours)),(float(sum_eff_hours)+.01-int(float(sum_eff_hours)))*60)"/></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <br></br>
+            <h2 class="pagebreak">2. Backlog</h2>
+            <p>A product backlog is a list of the new features, changes to existing features, bug fixes, infrastructure changes or other activities that a team may deliver in order to achieve a specific outcome.</p>
+            <table class="open_tasks">
+              <tr>
+                <th class="bold">ID</th>
+                <th class="bold">Name</th>
+                <th class="bold">Planned Hours</th>
+                <th class="bold">Worked Hours</th>
+                <th class="bold">Stage</th>
+                <th class="bold">Assigned to</th>
+              	<th class="bold">Labels</th>
+              	<th class="bold">KB State</th>                
+              </tr>
+              <t t-set="sum_plan_hours" t-value="0.0" />
+              <t t-set="sum_eff_hours" t-value="0.0" />
+              <tr t-foreach="o.task_ids.sorted(key=lambda r: r.stage_id.sequence)" t-as="task" t-if="task.stage_id.backlog_stage == True">
+                  <td><t t-esc="task.id"/></td>
+                  <td><t t-esc="task.name"/></td>
+                  <td align="right"><t t-esc="'%02d:%02d' % (int(float(task.planned_hours)),(float(task.planned_hours)+.01-int(float(task.planned_hours)))*60)"/></td>
+                  <td align="right"><t t-esc="'%02d:%02d' % (int(float(task.effective_hours)),(float(task.effective_hours)+.01-int(float(task.effective_hours)))*60)"/></td>
+                  <td><t t-esc="task.stage_id.name"/></td>
+                  <td><t t-if="task.stage_id.responsiblity_of_partner != True" t-esc="task.user_id.name"/> <t t-if="task.stage_id.responsiblity_of_partner == True" t-esc="task.partner_id.name"/></td>
+                  <t t-set="sum_plan_hours" t-value="sum_plan_hours+task.planned_hours" />
+                  <t t-set="sum_eff_hours" t-value="sum_eff_hours+task.effective_hours" />
+	              <td>
+					 <t t-foreach="issue.tag_ids" t-as="tag">
+						<t t-esc="tag.name" />
+					</t>
+	              </td>                  
+	              <td>
+	                <t t-if="issue.kanban_state == 'done'" t-esc="issue.legend_done" />
+	                <t t-if="issue.kanban_state == 'normal'" t-esc="issue.legend_normal" />
+	                <t t-if="issue.kanban_state == 'blocked'" t-esc="issue.legend_blocked" />
+	              </td>                  
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align: right;text-weight:bold;">Totalen</td>
+                <td align="right"><t t-esc="'%02d:%02d' % (int(float(sum_plan_hours)),(float(sum_plan_hours)+.01-int(float(sum_plan_hours)))*60)"/></td>
+                <td align="right"><t t-esc="'%02d:%02d' % (int(float(sum_eff_hours)),(float(sum_eff_hours)+.01-int(float(sum_eff_hours)))*60)"/></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <br></br>
+            <h2 class="pagebreak">3. Overview hour budget</h2>
+            <h3>3.1 Project Orders</h3>
+            <p>This table lists the sale orders for this project:</p>
+            <table class="orders">
+              <tr>
+                <th class="bold">Date</th>
+                <th class="bold">Description</th>
+                <th class="bold">Salesperson</th>
+                <th class="bold">Hours</th>
+                <th class="bold">State</th>
+              </tr>
+              <tr t-foreach="o.sale_order_id" t-as="order">
+                <td><span t-field="order.confirmation_date" t-options="{'widget': 'date'}"/></td>
+                <td><t t-esc="order.name"/></td>
+                <td><t t-esc="order.user_id.name"/></td>
+                <td align="right"><t t-esc="'%02d:%02d' % (int(float(order.total_hours_on_order)),(float(order.total_hours_on_order)+.01-int(float(order.total_hours_on_order)))*60)"/></td>
+                <td><t t-if="order.state == 'sale'">Order</t><t t-if="order.state == 'done'">Verwerkt</t></td>
+              </tr>
+            </table>
+            <br></br>
+            <table class="project_totals">
+              <tr class="project_totals">
+              	<td class="project_totals">Total hours budgeted:</td>
+              	<td class="project_totals" align="right"><span t-esc="'%02d:%02d' % (int(float(o.total_hours_on_project)),(float(o.total_hours_on_project)+.01-int(float(o.total_hours_on_project)))*60)"/></td>
+              </tr>
+              <tr class="project_totals">
+              	<td class="project_totals">Total hours spent:</td>
+	            <t t-set="tot_eff_hours"
+	            t-value="sum(al.unit_amount for al in o.env['account.analytic.line'].search([('account_id', '=', o.analytic_account_id.id), ('is_timesheet','=', True)]))"/>
+              	<td class="project_totals" align="right"><span t-esc="'%02d:%02d' % (int(float(tot_eff_hours)),(float(tot_eff_hours)+.01-int(float(tot_eff_hours)))*60)"/></td>
+              </tr>
+
+            </table>
+            <br></br>
+            <br></br>
+            <h3>3.2 Timesheets</h3>
+            <br></br>
+            <table class="total_hours">
+              <tr>
+                <th class="bold" width="12%">Datum</th>
+                <th class="bold">Employee</th>
+                <th class="bold">Description</th>
+                <th class="bold">Task</th>
+                <th class="bold">Source</th>
+                <th class="bold">Hours</th>
+              </tr>
+              <tr t-foreach="o.env['account.analytic.line'].search([('account_id', '=', o.analytic_account_id.id), ('is_timesheet','=', True)])" t-as="analytic_line">
+				<td><span t-field="analytic_line.date"/></td>
+				<td><t t-esc="analytic_line.user_id.name"/></td>
+				<td><t t-esc="analytic_line.name"/></td>
+				<td><t t-esc="analytic_line.task_id.name"/></td>
+				<td><t t-esc="'Task' if analytic_line.task_id else 'Issue' if analytic_line.issue_id else 'Ticket' if analytic_line.ticket_id else ''"/></td>
+				<td align="right"><t t-esc="'%02d:%02d' % (int(float(analytic_line.unit_amount)),(float(analytic_line.unit_amount)+.01-int(float(analytic_line.unit_amount)))*60)"/></td>
+              </tr>
+            </table>
+            <br></br>
+            <p style="page-break-before: always;"><h2>Legend</h2></p>
+            <br></br>
+            <span style="font-weight:bold;">Stage</span>
+            <table class="stages">
+              <tr t-foreach="o.type_ids" t-as="stage">
+                <td><t t-esc="stage.name"/></td>
+                <td><t t-esc="stage.description"/></td>
+              </tr>
+            </table>
+          </div>
+        </t>
+      </t>
+    </t>
+  </template>
+
+</odoo>

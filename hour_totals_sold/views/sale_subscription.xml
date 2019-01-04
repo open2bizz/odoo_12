@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_subscription_totals_sold" model="ir.ui.view">
+        <field name="name">sale.subscription.totals</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+               	<field name="monthly_hours"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

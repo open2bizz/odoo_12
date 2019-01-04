@@ -1,0 +1,16 @@
+  <odoo>
+    <data>
+      <record id="responsiblity_of_partner_form_view" model="ir.ui.view">
+          <field name="name">responsiblity.of.partner.form.view</field>
+          <field name="model">project.task.type</field>
+          <field name="inherit_id" ref="project.task_type_edit"/>
+          <field name="priority" eval="1"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='fold']" position='before'>
+                  <field name="responsiblity_of_partner"/>
+                  <field name="backlog_stage"/>
+              </xpath>
+          </field>
+      </record>
+    </data>
+  </odoo>
