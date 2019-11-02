@@ -17,3 +17,8 @@
 	path = OCA/website
 	url = git@github.com:OCA/website.git
 	branch = 12.0
+
+[submodule "OCA/sale-workflow"]
+	path = OCA/sale-workflow
+	url = git@github.com:OCA/sale-workflow.git
+	branch = 12.0
