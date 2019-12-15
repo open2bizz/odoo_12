@@ -27,3 +27,8 @@
 	path = thomaspot/account_sepa_direct_debit_additional_app
 	url = git@github.com:thomaspot/account_sepa_direct_debit_additional_app.git
 	branch = 12.0
+
+[submodule "OCA/commission"]
+	path = OCA/commission
+	url = git@github.com:OCA/commission.git
+	branch = 12.0
