@@ -32,3 +32,8 @@
 	path = OCA/commission
 	url = git@github.com:OCA/commission.git
 	branch = 12.0
+
+[submodule "OCA/knowledge"]
+	path = OCA/knowledge
+	url = git@github.com:OCA/knowledge.git
+	branch = 12.0
