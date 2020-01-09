@@ -42,6 +42,8 @@
 	path = open2bizz/odoo_crm
 	url = git@github.com:open2bizz/odoo_crm.git
 	branch = 12.0
+
 [submodule "odoo-addons"]
 	path = odoo-addons
 	url = https://github.com/open2bizz/odoo-addons.git
+	branch = 12.0
