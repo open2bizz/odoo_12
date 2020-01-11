@@ -1,0 +1,114 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hour_totals_sold
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-11 14:21+0000\n"
+"PO-Revision-Date: 2020-01-11 15:25+0100\n"
+"Last-Translator: Thomas Pot <t.pot@open2bizz.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: hour_totals_sold
+#: model_terms:ir.ui.view,arch_db:hour_totals_sold.view_helpdesk_ticket_totals_sold
+msgid "Contract hours"
+msgstr "Contract Uren"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,field_description:hour_totals_sold.field_helpdesk_ticket__monthly_hours_left
+msgid "Current month left"
+msgstr "Huidige maand restant"
+
+#. module: hour_totals_sold
+#: model:ir.model,name:hour_totals_sold.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Helpdesk Ticket"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,field_description:hour_totals_sold.field_helpdesk_ticket__monthly_hours_contract
+msgid "Monthly contract hours"
+msgstr "Maandelijkse Contract uren"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,field_description:hour_totals_sold.field_sale_subscription__monthly_hours
+msgid "Monthly hours"
+msgstr "Maandelijkse uren"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,field_description:hour_totals_sold.field_helpdesk_ticket__monthly_hours_spend
+msgid "Monthly spend"
+msgstr "Maandelijks verbruik"
+
+#. module: hour_totals_sold
+#: model:ir.model,name:hour_totals_sold.model_project_project
+msgid "Project"
+msgstr "Project/contract"
+
+#. module: hour_totals_sold
+#: model:ir.model,name:hour_totals_sold.model_sale_order
+msgid "Sale Order"
+msgstr "Verkooporder"
+
+#. module: hour_totals_sold
+#: model:ir.model,name:hour_totals_sold.model_sale_subscription
+msgid "Subscription"
+msgstr "Abonnement"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,help:hour_totals_sold.field_helpdesk_ticket__monthly_hours_left
+msgid "The amount of hours left for this month"
+msgstr "Huidige maand restant"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,help:hour_totals_sold.field_helpdesk_ticket__monthly_hours_contract
+#: model:ir.model.fields,help:hour_totals_sold.field_sale_subscription__monthly_hours
+msgid "The amount of hours per month included in this contract"
+msgstr "Het aantal uren/maand gereserveerd voor dit acontract"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,help:hour_totals_sold.field_helpdesk_ticket__monthly_hours_spend
+msgid "The amount of hours spend this month"
+msgstr "Het aantal uren verbruikt deze maand"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,field_description:hour_totals_sold.field_project_project__total_hours_on_project
+#: model:ir.model.fields,field_description:hour_totals_sold.field_sale_order__total_hours_on_order
+msgid "Total hours sold"
+msgstr "Totaal uren verkocht"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,help:hour_totals_sold.field_sale_order__total_hours_on_order
+msgid "Total hours sold on this order"
+msgstr "Totaal uren verkocht op de verkooporder"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,help:hour_totals_sold.field_project_project__total_hours_on_project
+msgid "Total hours sold on this project"
+msgstr "Totaal uren gereserveerd voor dit project"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,field_description:hour_totals_sold.field_project_project__total_hours_spent_on_project
+msgid "Total hours spent"
+msgstr "Totaal uren verbruikt"
+
+#. module: hour_totals_sold
+#: model:ir.model.fields,help:hour_totals_sold.field_project_project__total_hours_spent_on_project
+msgid "Total hours spent on this project"
+msgstr "Totaal uren verbruikt voor dit project"
+
+#. module: hour_totals_sold
+#: model_terms:ir.ui.view,arch_db:hour_totals_sold.view_helpdesk_ticket_totals_sold
+msgid "of"
+msgstr "van"
+
+#. module: hour_totals_sold
+#: model_terms:ir.ui.view,arch_db:hour_totals_sold.view_helpdesk_ticket_totals_sold
+msgid "used"
+msgstr "verbruikt"
