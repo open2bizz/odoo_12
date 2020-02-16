@@ -52,3 +52,8 @@
 	path = thomaspot/odoo-o2b
 	url = git@github.com:thomaspot/odoo-o2b.git
 	branch = master
+
+[submodule "thomaspot2/odoo-o2b"]
+	path = thomaspot2/odoo-o2b
+	url = git@github.com:thomaspot/odoo-o2b.git
+	branch = master
