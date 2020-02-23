@@ -38,7 +38,8 @@
     "data": [
         "views/project_overview.xml",
         "report/reports.xml",
-        "views/project_task_type.xml"
+        "views/project_task_type.xml",
+        "views/project_backlog.xml"
     ],
     "application": True,
     "installable": True,

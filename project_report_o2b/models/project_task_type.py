@@ -34,6 +34,13 @@ class BacklogProject(models.Model):
         comodel_name = 'project.project',
         string = 'Project Backlog',
         required = False,
-        domain = "[('partner_id.commercial_partner_id', '=', partner_id.commercial_partner_id)]",
+        domain = "[('partner_id.commercial_partner_id', '=', commercial_partner_id)]",
         context = "{'default_partner_id' : partner_id,'default_allow_timesheets': False,'default_allow_forecast': False,'default_name': 'Backlog ' + name,'default_user_id': user_id}"
+    )    
+
+    commercial_partner_id = fields.Many2one(
+        comodel_name = 'res.partner',
+        related = 'partner_id.commercial_partner_id',
+        string = 'Klant',
+        store = True
     )    
