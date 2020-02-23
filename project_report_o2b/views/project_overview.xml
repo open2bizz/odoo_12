@@ -161,7 +161,7 @@
               <th class="bold">KB State</th>
             </tr>
 
-<t t-if="o.id == o.x_studio_backlog_project.id">            
+<t t-if="o.id == o.backlog_project.id">            
 
             <t t-set="sum_plan_hours" t-value="0.0"/>
             <t t-set="sum_eff_hours" t-value="0.0"/>
@@ -213,11 +213,11 @@
 </t>    
 
               
-<t t-if="o.id != o.x_studio_backlog_project.id or o.x_studio_backlog_project == 0">
+<t t-if="o.id != o.backlog_project.id or o.backlog_project == 0">
           
             <t t-set="sum_plan_hours" t-value="0.0"/>
             <t t-set="sum_eff_hours" t-value="0.0"/>
-            <tr t-foreach="o.x_studio_backlog_project.task_ids.sorted(key=lambda r: r.stage_id.sequence)" t-as="task" t-if="task.stage_id.backlog_stage == True">
+            <tr t-foreach="o.backlog_project.task_ids.sorted(key=lambda r: r.stage_id.sequence)" t-as="task" t-if="task.stage_id.backlog_stage == True">
               <td>
                 <t t-esc="task.id"/>
               </td>
