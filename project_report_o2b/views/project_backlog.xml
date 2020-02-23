@@ -7,7 +7,8 @@
           <field name="priority" eval="16"/>
           <field name="arch" type="xml">
               <xpath expr="//field[@name='partner_id']" position='after'>
-                   <field name="project_id" string="Backlog Project" help="Onderliggend project voor Backlog taken" context="{'default_partner_id' : partner_id,'default_allow_timesheets': False,'default_allow_forecast': False,'default_name': 'Backlog ' + name,'default_user_id': user_id}" can_create="true" can_write="true" modifiers="{}"/>
+                  <field name="commercial_partner_id" readonly="1" string="Commercial"/>
+                   <field name="backlog_project_id" string="Backlog Project" help="Onderliggend project voor Backlog taken" context="{'default_partner_id' : partner_id,'default_allow_timesheets': False,'default_allow_forecast': False,'default_name': 'Backlog ' + name,'default_user_id': user_id}" can_create="true" can_write="true" modifiers="{}"/>
               </xpath>
           </field>
       </record>

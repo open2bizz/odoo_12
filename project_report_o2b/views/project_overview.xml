@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <template id="project_overview">
-    <?xml version="1.0"?>
 <t t-name="project_report_o2b.project_overview">
   <t t-call="web.html_container">
     <t t-foreach="docs" t-as="o">
