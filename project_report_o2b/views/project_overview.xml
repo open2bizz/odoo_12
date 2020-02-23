@@ -106,7 +106,7 @@
             </tr>
             <t t-set="sum_plan_hours" t-value="0.0"/>
             <t t-set="sum_eff_hours" t-value="0.0"/>
-            <tr t-foreach="o.task_ids.sorted(key=lambda r: r.stage_id.sequence)" t-as="task" t-if="task.stage_id.fold == False and task.stage_id.backlog_stage == False">
+            <tr t-foreach="o.task_ids.sorted(key=lambda r: r.stage_id.sequence)" t-as="task" t-if="task.stage_id.fold == False">
               <td>
                 <t t-esc="task.id"/>
               </td>
@@ -216,7 +216,7 @@
           
             <t t-set="sum_plan_hours" t-value="0.0"/>
             <t t-set="sum_eff_hours" t-value="0.0"/>
-            <tr t-foreach="o.backlog_project_id.task_ids.sorted(key=lambda r: r.stage_id.sequence)" t-as="task" t-if="task.stage_id.backlog_stage == True">
+            <tr t-foreach="o.backlog_project_id.task_ids.sorted(key=lambda r: r.stage_id.sequence)" t-as="task" >
               <td>
                 <t t-esc="task.id"/>
               </td>
@@ -363,6 +363,5 @@
     </t>
   </t>
 </t>
-
   </template>
 </odoo>
