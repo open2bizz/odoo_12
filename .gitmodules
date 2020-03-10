@@ -57,3 +57,8 @@
 	path = thomaspot2/odoo-o2b
 	url = git@github.com:thomaspot/odoo-o2b.git
 	branch = master
+
+[submodule "OCA/social"]
+	path = OCA/social
+	url = git@github.com:OCA/social.git
+	branch = 12.0
