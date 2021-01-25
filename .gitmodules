@@ -67,3 +67,8 @@
 	path = connector-telephony
 	url = git@github.com:OCA/connector-telephony.git
 	branch = 12.0
+
+[submodule "open2bizz/odoo-addons"]
+	path = open2bizz/odoo-addons
+	url = git@github.com:open2bizz/odoo-addons.git
+	branch = 14.0
