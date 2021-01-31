@@ -22,11 +22,13 @@
     'name': 'Show total hours sold on SO and Project',
     'description': 'Show total hours sold on SO and Project',
     'author': 'Open2Bizz',
-    'depends': ['sale', 'project', 'sale_subscription', 'helpdesk', 'helpdesk_timesheet'],
-    'data' : [#'views/sale_order_views.xml',
-              #'views/project_views.xml',
+    'depends': ['sale', 'project','account', 'sale_subscription', 'helpdesk', 'helpdesk_timesheet'],
+    'data' : [
+              'views/sale_order_views.xml',
+              'views/project_views.xml',
               'views/sale_subscription.xml',
               'views/helpdesk_views.xml',
+              'data/res_config_data.xml',
               ],
     'application': False,
 }

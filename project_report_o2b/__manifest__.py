@@ -33,7 +33,7 @@
         "base",
         "project",
         "hour_totals_sold",
-#        "helpdesk_project"
+
     ],
     "data": [
         "views/project_overview.xml",

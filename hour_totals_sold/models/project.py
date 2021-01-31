@@ -26,6 +26,8 @@ _logger = logging.getLogger(__name__)
 
 class Project(models.Model):
     _inherit = 'project.project'
+
+    commercial_partner_id = fields.Many2one("res.partner", related="partner_id.commercial_partner_id", readonly=True, string="Customer (Company)" )
     
     total_hours_on_project = fields.Float(string='Total hours sold'
                                         , help='Total hours sold on this project'

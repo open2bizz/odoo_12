@@ -1,4 +1,2 @@
-# Odoo Open2Bizz.tech
-
-repository Odoo intern Open2Bizz on Odoo.sh
-.
+# odoosh
+Private Repository Odoo SH Internal Odoo Open2Bizz
