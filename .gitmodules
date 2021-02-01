@@ -1,0 +1,4 @@
+[submodule "thomaspot/knowledge"]
+	path = thomaspot/knowledge
+	url = git@github.com:thomaspot/knowledge.git
+	branch = 14.0_migrate
