@@ -42,6 +42,7 @@ class Project(models.Model):
                                         , digits=dp.get_precision('Product Unit of Measure')
                                         , compute='_compute_spent_hours_on_project',
                                         )
+    overspending = fields.Boolean(string='Is overspending on project?', compute='_compute_overspending_on_project', store=True)
 
     def _compute_total_hours_on_project(self):
         for rec in self:
@@ -54,10 +55,18 @@ class Project(models.Model):
                 total += order.total_hours_on_order
             rec.total_hours_on_project = total
 
-    def _compute_spent_hours_on_project(self):
+    @api.multi
+    @api.depends('total_hours_on_project','total_hours_spent_on_project')
+    def _compute_overspending_on_project(self):
         for rec in self:
-            al_ids = self.env['account.analytic.line'].search([('account_id', '=', rec.analytic_account_id.id), ('is_timesheet','=', True)])
-            rec.total_hours_spent_on_project = sum(al_ids.mapped('unit_amount'))
+            if rec.total_hours_spent_on_project > rec.total_hours_on_project:
+                rec.overspending = True
+            else:
+                rec.overspending = False
+            
+
+    def _compute_total_hours_on_project(self):
+        for rec in self:
 
     def inform_about_task_progress(self, *args):
         projects = self.env['project.project'].search([('active', '=', True)])
