@@ -1,0 +1,83 @@
+<odoo>
+  <data>
+    <record id="external_layout_boxed_o2b" model="ir.ui.view">
+      <field name="name">external_layout_boxed_o2b</field>
+      <field name="inherit_id" ref="web.external_layout_boxed" />
+      <field name="priority" eval="26" />
+      <field name="arch" type="xml">
+        <xpath expr="//t[@t-name='web.external_layout_boxed']" position="replace">
+          <t t-name="web.external_layout_boxed_o2b">
+            <div class="header">
+              <div class="o_boxed_header">
+                <div class="row mb8">
+                  <div class="col-6">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="article o_report_layout_boxed" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+              <t t-call="web.address_layout" />
+              <t t-raw="0" />
+            </div>
+            <div class="footer o_boxed_footer">
+              <table tyle="width:100%">
+                <tr>
+                  <td style="width:20%">
+                    <span t-field="company.name" />
+                    <br />
+                    <span t-field="company.street" />
+                    <br />
+                    <span>
+                      <t t-esc="company.zip" />
+                      <t t-esc="company.city" />
+                    </span>
+                    <br />
+                    <span t-field="company.country_id.name" />
+                  </td>
+                  <td style="width:20%">
+                    <span>T:</span>
+                    <span t-field="company.phone" />
+                    <br />
+                    <span>@:</span>
+                    <span t-field="company.email" />
+                    <br />
+                    <span>W:</span>
+                    <span>
+                      <t t-esc="company.website" />
+                    </span>
+                    <br />
+                    <span>The Odoo specialist</span>
+                  </td>
+                  <td style="width:20%">
+                    <span>TAX:</span>
+                    <span t-field="company.vat" />
+                    <br />
+                    <span>KVK:</span>
+                    <span t-field="company.company_registry" />
+                    <br />
+                    <span>SWIFT:</span>
+                    <span>INGBNL2A</span>
+                    <br />
+                    <span>IBAN:</span>
+                    <span>NL91INGB0005808197</span>
+                  </td>
+                  <td style="width:20%" />
+                  <td style="width:20%" />
+                  <td style="width:150%;text-align: right">
+                    <div t-if="report_type == 'pdf'">
+                      Page:
+                      <span class="page" />
+                      /
+                      <span class="topage" />
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </t>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

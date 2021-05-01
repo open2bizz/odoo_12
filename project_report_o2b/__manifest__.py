@@ -40,6 +40,7 @@
         "report/reports.xml",
         "views/project_task_type.xml",
         "views/project_backlog.xml",
+        "views/report_layout.xml",
         "data/mail_template.xml",
     ],
     "application": True,
