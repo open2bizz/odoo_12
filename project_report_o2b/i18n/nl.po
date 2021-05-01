@@ -1,19 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* project_report_o2b
+# 	* project_report_o2b
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-13 13:55+0000\n"
-"PO-Revision-Date: 2021-02-13 13:55+0000\n"
+"POT-Creation-Date: 2021-05-01 10:52+0000\n"
+"PO-Revision-Date: 2021-05-01 12:56+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"Language: nl\n"
+"X-Generator: Poedit 2.4.3\n"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -23,7 +25,7 @@ msgstr "1. Overzicht uren budget"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "1.1 Project Orders"
-msgstr ""
+msgstr "1.1 Project Orders"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -38,19 +40,182 @@ msgstr "2. Open taken"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "3. Backlog"
+msgstr "3. Backlog"
+
+#. module: project_report_o2b
+#: model_terms:ir.ui.view,arch_db:project_report_o2b.external_layout_boxed_o2b
+msgid ""
+"<br/>\n"
+"                    <span>KVK:</span>"
 msgstr ""
+"<br/>\n"
+"                    <span>KVK:</span>"
+
+#. module: project_report_o2b
+#: model_terms:ir.ui.view,arch_db:project_report_o2b.external_layout_boxed_o2b
+msgid ""
+"<br/>\n"
+"                    <span>SWIFT:</span>\n"
+"                    <span>INGBNL2A</span>\n"
+"                    <br/>\n"
+"                    <span>IBAN:</span>\n"
+"                    <span>NL91INGB0005808197</span>"
+msgstr ""
+"<br/>\n"
+"                    <span>BIC:</span>\n"
+"                    <span>INGBNL2A</span>\n"
+"                    <br/>\n"
+"                    <span>IBAN:</span>\n"
+"                    <span>NL91INGB0005808197</span>"
+
+#. module: project_report_o2b
+#: model_terms:ir.ui.view,arch_db:project_report_o2b.external_layout_boxed_o2b
+msgid ""
+"<br/>\n"
+"                    <span>The Odoo specialist</span>"
+msgstr ""
+"<br/>\n"
+"                    <span>dé Odoo specialist</span>"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
-msgid "<br/>\n"
-"          <span style=\"font-weight:bold;\">Stage</span>"
-msgstr "<br/>\n"
+msgid ""
+"<br/>\n"
+"              <span style=\"font-weight:bold;\">Stage</span>"
+msgstr ""
+"<br/>\n"
 "          <span style=\"font-weight:bold;\">Fase</span>"
+
+#. module: project_report_o2b
+#: model:mail.template,body_html:project_report_o2b.email_template_project_overview
+msgid ""
+"<div summary=\"o_mail_template\" style=\"padding:0px; width:600px; margin:0 auto; background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                <table style=\"background-color:transparent;width:600px; background:inherit; color:inherit\" cellspacing=\"0\" cellpadding=\"0\">\n"
+"                    <tbody>\n"
+"                        <tr>\n"
+"                            <td style=\"padding:0px;text-align: left; font-size: 12px;\" width=\"200\" valign=\"center\">\n"
+"                                <img src=\"/logo.png\" style=\"border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-top-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;border-top-style:initial;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-top-width:0px;padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                                    <font style=\"font-size: 18px;\">\n"
+"                                        <b style=\"font-weight:bold;\">Project update</b>\n"
+"                                    </font>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"                <table style=\"background-color:transparent;width:600px; background:inherit; color:inherit\" cellspacing=\"0\" cellpadding=\"0\">\n"
+"\t\t\t        <tbody>\n"
+"                        <tr>\n"
+"\t\t\t               <td style=\"padding:0px; 0px 0px 0px;width:600px; padding:0px 10px 5px 5px;\" valign=\"top\">\n"
+"\t\t\t                <div>\n"
+"\t\t\t                    <hr style=\"border-top-style:solid;border-top-color:rgb(238, 238, 238);border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin:15px auto;padding:0\" width=\"100%\"/>\n"
+"\t\t\t                </div>\n"
+"\t\t\t               </td>\n"
+"\t\t\t           </tr>\n"
+"                    </tbody>\n"
+"\t\t\t    </table>\n"
+"\t\t\t</div>\n"
+"\t\t\t\n"
+"\t\t\t<div style=\"padding:0px; width:600px; max-width:600px; margin:0 auto; background: #FFFFFF repeat top /100%;color:#777777;text-align: left;\">\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">Beste ${object.partner_id.name},</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\"/>\n"
+"\t\t\t\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">In de bijlage hebben wij het bijgewerkte projectoverzicht toegevoegd. In dit overzicht ziet u:</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">  a) Alle taken welke wij op dit moment in behandeling hebben.</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">  b) Alle taken welke wij hebben overgedragen aan u om te testen.</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">  c) Alle vragen/verzoeken welke wij hebben hebben verzameld, maar nog niet in behandeling hebben genomen (backlog).</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">  d) Voortgang van de uren en specificatie van de urenregistratie</p>\n"
+"\t\t\t% if object.overspending:\n"
+"\t\t\t\t<strong>Er is een budget overschrijding geconstateerd. Neem contact met ons op om nieuw budget af te spreken, zodat de werkzaamheden niet stilvallen</strong>\n"
+"\t\t\t%endif\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">Met vriendelijke groet,</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\"><strong style=\"font-weight:bold;\">${user.name}</strong></p>\n"
+"\t\t\t</div>\n"
+"\t\t\t<!-- lijn --> \n"
+"\t\t\t<div>\n"
+"\t\t\t\t<hr style=\"border-top-style:solid;border-top-color:rgb(238, 238, 238);border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin:15px auto;padding:0\" width=\"100%\"/>\n"
+"\t\t\t</div>\n"
+"\t\t\t<!-- lijn --> \n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;text-align: center; font-size: 10px;\">Wanneer u verdere vragen en of opmerkingen heeft, stuurt u dan een antwoord op deze email.</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;text-align: center; font-size: 10px;\">Uw bericht wordt dan automatisch doorgestuurd naar alle teamleden van het project.</p>\n"
+"\t\t\t<!-- lijn --> \n"
+"\t\t\t<div>\n"
+"\t\t\t\t<hr style=\"border-top-style:solid;border-top-color:rgb(238, 238, 238);border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin:15px auto;padding:0\" width=\"100%\"/>\n"
+"\t\t\t</div>\n"
+"\t\t\t<!-- lijn --> \n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;text-align: center; font-size: 11px;\">\n"
+"                <strong style=\"font-weight:bold;\">bericht verstuurd door<a href=\"https://www.open2bizz.nl\" style=\"color:rgb(33, 183, 153);text-decoration-color:initial;text-decoration-style:initial;text-decoration-line:none; color: #303539;\"/></strong>\n"
+"                    <strong style=\"font-weight:bold;\">${user.company_id.name}</strong> m.b.v. <a href=\"https://www.open2bizz.nl\" style=\"color:rgb(33, 183, 153);text decoration-color:initial;text-decoration-style:initial;text-decoration-line:none; color: #303539;\"/><strong style=\"font-weight:bold;\">Odoo - dé alles in 1 oplossing voor bedrijven</strong>\n"
+"                </p>\n"
+"      "
+msgstr ""
+"<div summary=\"o_mail_template\" style=\"padding:0px; width:600px; margin:0 auto; background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                <table style=\"background-color:transparent;width:600px; background:inherit; color:inherit\" cellspacing=\"0\" cellpadding=\"0\">\n"
+"                    <tbody>\n"
+"                        <tr>\n"
+"                            <td style=\"padding:0px;text-align: left; font-size: 12px;\" width=\"200\" valign=\"center\">\n"
+"                                <img src=\"/logo.png\" style=\"border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-top-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;border-top-style:initial;border-left-width:0px;border-bottom-width:0px;border-right-width:0px;border-top-width:0px;padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                                    <font style=\"font-size: 18px;\">\n"
+"                                        <b style=\"font-weight:bold;\">Project update</b>\n"
+"                                    </font>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"                <table style=\"background-color:transparent;width:600px; background:inherit; color:inherit\" cellspacing=\"0\" cellpadding=\"0\">\n"
+"\t\t\t        <tbody>\n"
+"                        <tr>\n"
+"\t\t\t               <td style=\"padding:0px; 0px 0px 0px;width:600px; padding:0px 10px 5px 5px;\" valign=\"top\">\n"
+"\t\t\t                <div>\n"
+"\t\t\t                    <hr style=\"border-top-style:solid;border-top-color:rgb(238, 238, 238);border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin:15px auto;padding:0\" width=\"100%\"/>\n"
+"\t\t\t                </div>\n"
+"\t\t\t               </td>\n"
+"\t\t\t           </tr>\n"
+"                    </tbody>\n"
+"\t\t\t    </table>\n"
+"\t\t\t</div>\n"
+"\t\t\t\n"
+"\t\t\t<div style=\"padding:0px; width:600px; max-width:600px; margin:0 auto; background: #FFFFFF repeat top /100%;color:#777777;text-align: left;\">\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">Beste ${object.partner_id.name},</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\"/>\n"
+"\t\t\t\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">In de bijlage hebben wij het bijgewerkte projectoverzicht toegevoegd. In dit overzicht ziet u:</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">  a) Alle taken welke wij op dit moment in behandeling hebben.</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">  b) Alle taken welke wij hebben overgedragen aan u om te testen.</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">  c) Alle vragen/verzoeken welke wij hebben hebben verzameld, maar nog niet in behandeling hebben genomen (backlog).</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">  d) Voortgang van de uren en specificatie van de urenregistratie</p>\n"
+"\t\t\t% if object.overspending:\n"
+"\t\t\t\t<strong>Er is een budget overschrijding geconstateerd. Neem contact met ons op om nieuw budget af te spreken, zodat de werkzaamheden niet stilvallen</strong>\n"
+"\t\t\t%endif\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\">Met vriendelijke groet,</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;\"><strong style=\"font-weight:bold;\">${user.name}</strong></p>\n"
+"\t\t\t</div>\n"
+"\t\t\t<!-- lijn --> \n"
+"\t\t\t<div>\n"
+"\t\t\t\t<hr style=\"border-top-style:solid;border-top-color:rgb(238, 238, 238);border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin:15px auto;padding:0\" width=\"100%\"/>\n"
+"\t\t\t</div>\n"
+"\t\t\t<!-- lijn --> \n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;text-align: center; font-size: 10px;\">Wanneer u verdere vragen en of opmerkingen heeft, stuurt u dan een antwoord op deze email.</p>\n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;text-align: center; font-size: 10px;\">Uw bericht wordt dan automatisch doorgestuurd naar alle teamleden van het project.</p>\n"
+"\t\t\t<!-- lijn --> \n"
+"\t\t\t<div>\n"
+"\t\t\t\t<hr style=\"border-top-style:solid;border-top-color:rgb(238, 238, 238);border-image-repeat:initial;border-image-outset:initial;border-image-width:initial;border-image-slice:initial;border-image-source:initial;border-left-color:initial;border-bottom-color:initial;border-right-color:initial;border-left-style:initial;border-bottom-style:initial;border-right-style:initial;background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin:15px auto;padding:0\" width=\"100%\"/>\n"
+"\t\t\t</div>\n"
+"\t\t\t<!-- lijn --> \n"
+"\t\t\t<p style=\"margin:0px 0px 9px 0px;text-align: center; font-size: 11px;\">\n"
+"                <strong style=\"font-weight:bold;\">bericht verstuurd door<a href=\"https://www.open2bizz.nl\" style=\"color:rgb(33, 183, 153);text-decoration-color:initial;text-decoration-style:initial;text-decoration-line:none; color: #303539;\"/></strong>\n"
+"                    <strong style=\"font-weight:bold;\">${user.company_id.name}</strong> m.b.v. <a href=\"https://www.open2bizz.nl\" style=\"color:rgb(33, 183, 153);text decoration-color:initial;text-decoration-style:initial;text-decoration-line:none; color: #303539;\"/><strong style=\"font-weight:bold;\">Odoo - dé alles in 1 oplossing voor bedrijven</strong>\n"
+"                </p>\n"
+"      "
+
+#. module: project_report_o2b
+#: model_terms:ir.ui.view,arch_db:project_report_o2b.external_layout_boxed_o2b
+msgid "<span>TAX:</span>"
+msgstr "<span>BTW:</span>"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "<strong>Customer</strong>"
-msgstr ""
+msgstr "<strong>Klant</strong>"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -60,12 +225,12 @@ msgstr "<strong>Datum</strong>"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "<strong>Project Manager</strong>"
-msgstr ""
+msgstr "<strong>Projectleider</strong>"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "<strong>Project</strong>"
-msgstr ""
+msgstr "<strong>Project</strong>"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -85,17 +250,17 @@ msgstr "Toegewezen aan"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_backlog
 msgid "Backlog Project"
-msgstr ""
+msgstr "Backlog Project"
 
 #. module: project_report_o2b
 #: model:ir.model.fields,field_description:project_report_o2b.field_project_task_type__backlog_stage
 msgid "Backlog stage"
-msgstr ""
+msgstr "Backlog fase"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_backlog
 msgid "Commercial"
-msgstr ""
+msgstr "Commercieel"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -105,7 +270,7 @@ msgstr "Datum"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Datum"
-msgstr ""
+msgstr "Datum"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -130,22 +295,27 @@ msgstr ""
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "KB State"
-msgstr ""
+msgstr "KB State"
 
 #. module: project_report_o2b
 #: model:ir.model.fields,field_description:project_report_o2b.field_project_project__commercial_partner_id
 msgid "Klant"
-msgstr ""
+msgstr "Klant"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Labels"
-msgstr ""
+msgstr "Labels"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Legend"
 msgstr "Legenda"
+
+#. module: project_report_o2b
+#: model_terms:ir.ui.view,arch_db:project_report_o2b.external_layout_boxed_o2b
+msgid "Logo"
+msgstr "Logo"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -155,12 +325,25 @@ msgstr "Naam"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_backlog
 msgid "Onderliggend project voor Backlog taken"
-msgstr ""
+msgstr "Onderliggend project voor Backlog taken"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Order"
+msgstr "Order"
+
+#. module: project_report_o2b
+#: model_terms:ir.ui.view,arch_db:project_report_o2b.external_layout_boxed_o2b
+msgid ""
+"Page:\n"
+"                      <span class=\"page\"/>\n"
+"                      /\n"
+"                      <span class=\"topage\"/>"
 msgstr ""
+"Pagina:\n"
+"                      <span class=\"page\"/>\n"
+"                      /\n"
+"                      <span class=\"topage\"/>"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -175,12 +358,12 @@ msgstr "Project/contract"
 #. module: project_report_o2b
 #: model:ir.model.fields,field_description:project_report_o2b.field_project_project__backlog_project_id
 msgid "Project Backlog"
-msgstr ""
+msgstr "Project Backlog"
 
 #. module: project_report_o2b
 #: model:ir.actions.report,name:project_report_o2b.project_overview_report
 msgid "Project Overview"
-msgstr ""
+msgstr "Project Overzicht"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -188,19 +371,29 @@ msgid "Project information"
 msgstr "Project informatie"
 
 #. module: project_report_o2b
+#: model:mail.template,subject:project_report_o2b.email_template_project_overview
+msgid "Project update ${object.name}"
+msgstr "Project update ${object.name}"
+
+#. module: project_report_o2b
+#: model:mail.template,report_name:project_report_o2b.email_template_project_overview
+msgid "Project-Overview_${(object.name or '')"
+msgstr "Project-Overzicht_${(object.name or '')"
+
+#. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Remaining budget (rounded):"
-msgstr ""
+msgstr "Resterend budget (Afgerond):"
 
 #. module: project_report_o2b
 #: model:ir.model.fields,field_description:project_report_o2b.field_project_task_type__responsiblity_of_partner
 msgid "Responsibility of Partner"
-msgstr ""
+msgstr "Verantwoordelijkheid klant"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Salesperson"
-msgstr ""
+msgstr "Verkoper"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -210,17 +403,17 @@ msgstr "Bron"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Stage"
-msgstr ""
+msgstr "Fase"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "State"
-msgstr ""
+msgstr "Status"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Task"
-msgstr ""
+msgstr "Taak"
 
 #. module: project_report_o2b
 #: model:ir.model,name:project_report_o2b.model_project_task_type
@@ -229,10 +422,12 @@ msgstr "Taak status"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
-msgid "The hours worked (see column 4) in this table can also be found in table 1.2 Timesheets. These hours worked have therefore already been processed in 1.1 Total hours used.\n"
-"              <br/>\n"
-"				Be aware! hours may not have been scheduled for every task. This can therefore change at a later stage."
-msgstr "De gewerkte uren (zie kolom 4) in deze tabel zijn ook terug te vinden in de tabel 1.2 Timesheets. Deze gewerkte uren zijn dus al verwerkt in 1.1 Totaal uren verbruikt. <br/>\n"
+msgid ""
+"The hours worked (see column 4) in this table can also be found in table 1.2 Timesheets. These hours worked have therefore already been processed in 1.1 Total hours used.\n"
+"                  <br/>\n"
+"                  Be aware! hours may not have been scheduled for every task. This can therefore change at a later stage."
+msgstr ""
+"De gewerkte uren (zie kolom 4) in deze tabel zijn ook terug te vinden in de tabel 1.2 Timesheets. Deze gewerkte uren zijn dus al verwerkt in 1.1 Totaal uren verbruikt. <br/>\n"
 "Let op! het is mogelijk dat nog niet voor elke taak al uren zijn gepland. Dit kan in een latere fase dus nog veranderen."
 
 #. module: project_report_o2b
@@ -243,7 +438,7 @@ msgstr "Deze tabel bevat de verkooporders voor dit project:"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Totaal:"
-msgstr ""
+msgstr "Totaal:"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
@@ -258,25 +453,24 @@ msgstr "Totaal uren gebruikt"
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Totalen"
-msgstr ""
+msgstr "Totalen"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Verwerkt"
-msgstr ""
+msgstr "Verwerkt"
 
 #. module: project_report_o2b
 #: model:ir.model.fields,help:project_report_o2b.field_project_task_type__backlog_stage
 msgid "When task is in this stage it's treated as a backlog item, there is no funding for this item therefor it cannot be cannot be carried out yet."
-msgstr ""
+msgstr "When task is in this stage it's treated as a backlog item, there is no funding for this item therefor it cannot be cannot be carried out yet."
 
 #. module: project_report_o2b
 #: model:ir.model.fields,help:project_report_o2b.field_project_task_type__responsiblity_of_partner
 msgid "When task is in this stage its the responsibility of the partner assigned to perform actions regarding this task"
-msgstr ""
+msgstr "Wanneer de taak zich in deze fase bevindt, is het de verantwoordelijkheid van de partner die is toegewezen om acties met betrekking tot deze taak uit te voeren"
 
 #. module: project_report_o2b
 #: model_terms:ir.ui.view,arch_db:project_report_o2b.project_overview
 msgid "Worked Hours"
 msgstr "Gewerkte uren"
-
