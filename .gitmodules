@@ -1,9 +1,7 @@
-[submodule "thomaspot/knowledge"]
-	path = thomaspot/knowledge
-	url = git@github.com:thomaspot/knowledge.git
-	branch = 14.0_migrate
-
 [submodule "connector-telephony"]
 	path = connector-telephony
 	url = git@github.com:akretion/connector-telephony.git
 	branch = 14-mig-asterisk_click2dial
+[submodule "knowledge"]
+	path = knowledge
+	url = https://github.com/OCA/knowledge.git
