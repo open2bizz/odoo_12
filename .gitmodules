@@ -1,4 +1,19 @@
 [submodule "connector-telephony"]
 	path = connector-telephony
-	url = git@github.com:OCA/connector-telephony.git
-	branch = 12.0
+	url = git@github.com:akretion/connector-telephony.git
+	branch = 14-mig-asterisk_click2dial
+[submodule "knowledge"]
+	path = knowledge
+	url = https://github.com/OCA/knowledge.git
+[submodule "website"]
+	path = website
+	url = git@github.com:OCA/website.git
+	branch = 14.0
+[submodule "oca_web"]
+	path = oca_web
+	url = git@github.com:OCA/web.git
+	branch = 14.0
+[submodule "oca_social"]
+	path = oca_social
+	url = git@github.com:OCA/social.git
+	branch = 14.0
