@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_default_data_form_edit" model="ir.ui.view">
+            <field name="name">default.data.form</field>
+            <field name="priority">100</field>
+            <field name="model">default.data</field>
+            <field name="arch" type="xml">
+                <form string="Default Data">
+                    <sheet>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="model_id"/>
+                        </group>
+                        <group>
+                            <field name="field_id" attrs="{'invisible' : [('model_id', '=', False)] }"/>
+                            <field name="model" attrs="{'invisible' : [('model_id', '=', False)] }"/>
+                            <field name="field" attrs="{'invisible' : [('field_id', '=', False)] }"/>
+                            <field name="type" attrs="{'invisible' : [('field_id', '=', False)] }"/>
+                        </group>
+                        </group>
+                        <group>
+                            <field name="value_char" attrs="{'invisible' : [('type', '!=', 'char')]}"/>
+                            <field name="value_text" attrs="{'invisible' : [('type', '!=', 'text')]}"/>
+                            <field name="value_html" attrs="{'invisible' : [('type', '!=', 'html')]}"/>
+                            <field name="value_integer" attrs="{'invisible' : [('type', '!=', 'integer')]}"/>
+                            <field name="value_float" attrs="{'invisible' : [('type', '!=', 'float')]}"/>
+                            <field name="value_boolean" attrs="{'invisible' : [('type', '!=', 'boolean')]}"/>
+                            <field name="value_binary" attrs="{'invisible' : [('type', '!=', 'binary')]}"/>
+                            <field name="value_date" attrs="{'invisible' : [('type', '!=', 'date')]}"/>
+                            <field name="value_datetime" attrs="{'invisible' : [('type', '!=', 'datetime')]}"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <record id="view_default_data_form_edit" model="ir.ui.view">
+            <field name="name">default.data.form</field>
+            <field name="priority">100</field>
+            <field name="model">default.data</field>
+            <field name="arch" type="xml">
+                <form string="Default Data">
+                    <sheet>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="model_id"/>
+                        </group>
+                        <group>
+                            <field name="field_id" attrs="{'invisible' : [('model_id', '=', False)] }"/>
+                            <field name="model" attrs="{'invisible' : [('model_id', '=', False)] }"/>
+                            <field name="field" attrs="{'invisible' : [('field_id', '=', False)] }"/>
+                            <field name="type" attrs="{'invisible' : [('field_id', '=', False)] }"/>
+                        </group>
+                        </group>
+                        <group>
+                            <field name="value_char" attrs="{'invisible' : [('type', '!=', 'char')]}"/>
+                            <field name="value_text" attrs="{'invisible' : [('type', '!=', 'text')]}"/>
+                            <field name="value_html" attrs="{'invisible' : [('type', '!=', 'html')]}"/>
+                            <field name="value_integer" attrs="{'invisible' : [('type', '!=', 'integer')]}"/>
+                            <field name="value_float" attrs="{'invisible' : [('type', '!=', 'float')]}"/>
+                            <field name="value_boolean" attrs="{'invisible' : [('type', '!=', 'boolean')]}"/>
+                            <field name="value_binary" attrs="{'invisible' : [('type', '!=', 'binary')]}"/>
+                            <field name="value_date" attrs="{'invisible' : [('type', '!=', 'date')]}"/>
+                            <field name="value_datetime" attrs="{'invisible' : [('type', '!=', 'datetime')]}"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+ 
+        <record id="view_default_data_form" model="ir.ui.view">
+            <field name="name">default.data.form_view</field>
+            <field name="priority">16</field>
+            <field name="model">default.data</field>
+            <field name="arch" type="xml">
+                <form string="Default Data">
+                    <sheet>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="model_id" readonly="1"/>
+                            <field name="field_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="model" attrs="{'invisible' : True }"/>
+                            <field name="field" attrs="{'invisible' : True }"/>
+                            <field name="type" attrs="{'invisible' : True }"/>
+                        </group>
+                        </group>
+                        <group>
+                            <field name="value_char" attrs="{'invisible' : [('type', '!=', 'char')]}"/>
+                            <field name="value_text" attrs="{'invisible' : [('type', '!=', 'text')]}"/>
+                            <field name="value_html" attrs="{'invisible' : [('type', '!=', 'html')]}"/>
+                            <field name="value_integer" attrs="{'invisible' : [('type', '!=', 'integer')]}"/>
+                            <field name="value_float" attrs="{'invisible' : [('type', '!=', 'float')]}"/>
+                            <field name="value_boolean" attrs="{'invisible' : [('type', '!=', 'boolean')]}"/>
+                            <field name="value_binary" attrs="{'invisible' : [('type', '!=', 'binary')]}"/>
+                            <field name="value_date" attrs="{'invisible' : [('type', '!=', 'date')]}"/>
+                            <field name="value_datetime" attrs="{'invisible' : [('type', '!=', 'datetime')]}"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="default_data_search" model="ir.ui.view">
+            <field name="name">default_data_search</field>
+            <field name="model">default.data</field>
+            <field name="arch" type="xml">
+               <search string="Default Data">
+                    <field name="name" string="Name"/>
+                    <field name="model_id"/>
+                    <field name="type"/>
+                    <field name="value_char" string="Value txt/char/html" filter_domain="['|', '|', ('value_char', 'ilike', self), ('value_html', 'ilike', self), ('value_text', 'ilike', self)]"/>
+                    <field name="value_date"/>
+                    <field name="value_datetime"/>
+                    <field name="value_integer"/>
+                    <field name="value_float"/>
+                    <separator/>
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Type" name="type" context="{'group_by': 'type'}"/>
+                        <filter string="Model" name="model_id" context="{'group_by': 'model_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>    
+    <record id="view_default_data_tree" model="ir.ui.view">
+            <field name="name">default.data.tree</field>
+            <field name="model">default.data</field>
+            <field name="arch" type="xml">
+                <tree string="Default Data">
+                    <field name="name" />
+                    <field name="model" />
+                    <field name="field_id" />
+                    <field name="type" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_default_data" model="ir.actions.act_window">
+            <field name="name">Default Data</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">default.data</field>
+            <field name="view_id" ref="view_default_data_tree" />
+            <field name="search_view_id" ref="default_data_search"/>
+        </record>
+
+        <record id="default_data_action_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_default_data_tree"/>
+            <field name="act_window_id" ref="action_default_data"/>
+        </record>
+
+        <record id="default_data_action_view_form" model="ir.actions.act_window.view">
+            <field name="sequence" eval="9"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_default_data_form_edit"/>
+            <field name="act_window_id" ref="action_default_data"/>
+        </record>
+        
+        <menuitem id="menu_default_data_root" parent="base.menu_administration"
+            groups="default_data.group_default_data_admin" name="Default Data" sequence="5" action="action_default_data" />
+</odoo>

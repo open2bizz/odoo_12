@@ -5,13 +5,30 @@
         <field name="model">helpdesk.ticket</field>
         <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
         <field name="arch" type="xml">
-            <field name="deadline" position="after">
+            <field name="sla_deadline" position="after">
 				<label for="monthly_hours_contract" string="Contract hours"/>
 				<div>
 				     <field name="monthly_hours_spend" class="oe_inline"/> of <field name="monthly_hours_contract" class="oe_inline"/> used
 				 </div>
 				 <field name="monthly_hours_left" class="oe_inline" style="color:red;" attrs="{'invisible': [('monthly_hours_left', '>', 0)]}"/>               	
+				 <field name="commercial_partner_id" invisible="1"/>               	
             </field>
         </field>
     </record>
+
+    <record id="view_helpdesk_ticket_totals_sold_timesheets" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.totals_timesheets</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_timesheet"/>
+        <field name="arch" type="xml">
+            <field name="project_id" position="replace">
+				 <field name="project_id" attrs="{'invisible': [('use_helpdesk_timesheet', '=', False)]}" domain="[('commercial_partner_id', '=',commercial_partner_id)]"/>
+            </field>
+            <field name="task_id" position="replace">
+                 <field name="task_id" context="{'default_project_id': project_id, 'default_partner_id': partner_id}" domain="[('project_id', '=',project_id)]" widget="task_with_hours"/>
+            </field>
+
+        </field>
+    </record>
+
 </odoo>

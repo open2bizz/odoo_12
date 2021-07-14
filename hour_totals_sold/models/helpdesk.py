@@ -27,7 +27,9 @@ _logger = logging.getLogger(__name__)
 
 class HelpdeskTicket(models.Model):
     _inherit = 'helpdesk.ticket'
-    
+
+    commercial_partner_id = fields.Many2one("res.partner", related="partner_id.commercial_partner_id", readonly=True, string="Customer Company" )
+
     monthly_hours_contract = fields.Float('Monthly contract hours'
                                  , help='The amount of hours per month included in this contract'
                                  , compute='_compute_total_hours')

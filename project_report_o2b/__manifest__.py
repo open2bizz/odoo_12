@@ -33,15 +33,13 @@
         "base",
         "project",
         "hour_totals_sold",
-#        "helpdesk_project"
+
     ],
     "data": [
         "views/project_overview.xml",
         "report/reports.xml",
         "views/project_task_type.xml",
-        "views/project_backlog.xml",
-        "views/report_layout.xml",
-        "data/mail_template.xml",
+        "views/project_backlog.xml"
     ],
     "application": True,
     "installable": True,

@@ -10,7 +10,7 @@
     'author': 'Open2Bizz',
     'license': 'LGPL-3',
     'installable': True,
-    'depends': ['mail'],
+    'depends': ['mail','project'],
     'data': [
         'views/activity_view.xml',
     ]

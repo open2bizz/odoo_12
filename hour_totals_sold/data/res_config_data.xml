@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hours_on_total_settings" model="res.config.settings">
+        <field name="group_analytic_accounting" eval="True"/>
+        <field name="group_uom" eval="True"/>
+    </record>
+
+    <function model="res.config.settings" name="execute">
+        <value model="res.config.settings"
+               search="[('id', '=', ref('hours_on_total_settings'))]"/>
+    </function>
+</odoo>
