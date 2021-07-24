@@ -1,19 +1,24 @@
+[submodule "OCA/website"]
+	path = OCA/website
+	url = git@github.com:OCA/website.git
+	branch = 14.0
+
+[submodule "OCA/web"]
+	path = OCA/web
+	url = git@github.com:OCA/web.git
+	branch = 14.0
+
+[submodule "OCA/social"]
+	path = OCA/social
+	url = git@github.com:OCA/social.git
+	branch = 14.0
+
+[submodule "open2bizz/knowledge"]
+	path = open2bizz/knowledge
+	url = git@github.com:open2bizz/knowledge.git
+	branch = 14.0_mig_document_page_project
+  
 [submodule "connector-telephony"]
 	path = connector-telephony
 	url = git@github.com:akretion/connector-telephony.git
 	branch = 14-mig-asterisk_click2dial
-[submodule "knowledge"]
-	path = knowledge
-	url = https://github.com/OCA/knowledge.git
-[submodule "website"]
-	path = website
-	url = git@github.com:OCA/website.git
-	branch = 14.0
-[submodule "oca_web"]
-	path = oca_web
-	url = git@github.com:OCA/web.git
-	branch = 14.0
-[submodule "oca_social"]
-	path = oca_social
-	url = git@github.com:OCA/social.git
-	branch = 14.0

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!-- Copyright Open2Bizz -->
+<odoo>
+    <data>
+        <record id="view_project_task_calendar_event_search_form" model="ir.ui.view">
+            <field name="name">view_project_task_calendar_event_search_form</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_search"/>
+            <field name="arch" type="xml">
+               <xpath expr="//field[@name='partner_ids']" position="after">
+                    <field name="task_id"/>
+                    <field name="project_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="act_project_task_calendar_event_all" model="ir.actions.act_window">
+            <field name="name">Meetings</field>
+            <field name="res_model">calendar.event</field>
+            <field name="view_mode">calendar,tree,form</field>
+            <field name="context">{
+                'search_default_task_id': [active_id],
+                'default_task_id': active_id,
+            }</field>
+        </record>
+
+        <record id="calendar_project_task_view_calendar_event_form" model="ir.ui.view">
+            <field name="name">calendar_project_task_view_calendar_event_form</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='location']" position="after">
+                    <field name="project_id" string="Project" attrs="{'invisible': [('project_id', '=', False)]}" />
+                    <field name="task_id" string="Task"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Task -->
+        <record id="view_task_kanban_flow_calendar" model="ir.ui.view">
+            <field name="name">view_task_kanban_flow_calendar</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr='//kanban/field[@name="rating_ids"]' position="after">
+                        <field name="calendar_event_count"/>
+                        <field name="next_event_start"/>
+                    </xpath>
+                    <xpath expr="//div[@name='date_deadline']" position="after">
+                        <div name="next_event_start" attrs="{'invisible': [('calendar_event_count', '=', 0)]}">
+                            <field name="next_event_start" widget="date"/>
+                        </div>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <!-- todo: add form view and button to plan new meeting -->
+        <record id="act_project_task_view_calendar_event" model="ir.actions.act_window">
+            <field name="name">Meetings</field>
+            <field name="res_model">calendar.event</field>
+            <field name="view_mode">calendar,tree,form</field>
+            <field name="context">{
+                'search_default_task_id': [active_id],
+                'default_task_id': active_id
+            }</field>
+        </record>
+
+        <record id="view_task_form_calendar" model="ir.ui.view">
+            <field name="name">view_task_form_calendar</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='legend_done']" position="after">
+                        <field name="next_event_id"/>
+                        <field name="next_event_start"/>
+                    </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button class="oe_stat_button" type="object"
+                            name="button_create_event" icon="fa-calendar">
+                        <field string="Calendar Events" name="calendar_event_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="calendar_event_calendar_task" model="ir.ui.view">
+            <field name="name">calendar.event.calendar.tasks</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_calendar"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='privacy']" position="after">
+                        <field name="project_id"/>
+                        <field name="task_id"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>

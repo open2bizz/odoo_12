@@ -1,6 +1,6 @@
 ###################################################################################
 # 
-#    Copyright (C) 2020 Cetmix OÜ
+#    Copyright (C) Cetmix OÜ
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU LESSER GENERAL PUBLIC LICENSE as
@@ -22,7 +22,7 @@
     " Show all messages, Show sent messages, Reply to message, Edit message,"
     " Forward message, Quote message, Move message"
     " Email client style for messages views and more",
-    "version": "14.0.7.0.1",
+    "version": "14.0.7.0.5",
     "summary": """Read and manage all Odoo messages in one place!""",
     "author": "Ivan Sokolov, Cetmix",
     "category": "Discuss",
@@ -40,7 +40,7 @@
         "security/ir.model.access.csv",
         "security/rules.xml",
         "data/data.xml",
-        "views/prt_mail.xml",
+        "views/mail_message.xml",
         "views/conversation.xml",
         "views/partner.xml",
         "views/res_config_settings.xml",
