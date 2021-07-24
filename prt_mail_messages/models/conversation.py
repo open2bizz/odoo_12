@@ -1,6 +1,6 @@
 ###################################################################################
 # 
-#    Copyright (C) 2020 Cetmix OÜ
+#    Copyright (C) Cetmix OÜ
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU LESSER GENERAL PUBLIC LICENSE as
@@ -78,7 +78,7 @@ class Conversation(models.Model):
         return [(4, self.env.user.partner_id.id)]
 
     active = fields.Boolean(string="Active", default=True)
-    name = fields.Char(string="Subject", required=True, track_visibility="onchange")
+    name = fields.Char(string="Subject", required=True, tracking=True)
     author_id = fields.Many2one(
         string="Author",
         comodel_name="res.partner",
@@ -152,8 +152,10 @@ class Conversation(models.Model):
         # Compose subject
         for rec in self.with_context(bin_size=False):
             # Get message date with timezone
-            message_date = pytz.utc.localize(rec.last_message_post).astimezone(local_tz)
             if rec.last_message_post:
+                message_date = pytz.utc.localize(rec.last_message_post).astimezone(
+                    local_tz
+                )
                 # Compose displayed date/time
                 days_diff = (now.date() - message_date.date()).days
                 if days_diff == 0:
@@ -172,7 +174,6 @@ class Conversation(models.Model):
                 date_display = ""
 
             # Compose messages count
-            message_count_text = ""
             message_count = rec.message_count
             # Total messages
             if message_count == 0:
