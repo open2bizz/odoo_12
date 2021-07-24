@@ -12,3 +12,8 @@
 	path = OCA/social
 	url = git@github.com:OCA/social.git
 	branch = 14.0
+
+[submodule "open2bizz/knowledge"]
+	path = open2bizz/knowledge
+	url = git@github.com:open2bizz/knowledge.git
+	branch = 14.0_mig_document_page_project
