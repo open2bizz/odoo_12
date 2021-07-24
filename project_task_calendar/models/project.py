@@ -20,7 +20,7 @@ class Task(models.Model):
     next_event_id = fields.Many2one('calendar.event',compute='_compute_events', string='Upcoming Event')
     next_event_start = fields.Datetime(related='next_event_id.start', string='Upcoming Event Start')
 
-    @api.depends('calendar_event_ids')
+    @api.depends('calendar_event_ids','calendar_event_count')
     def _compute_events(self):
         now = fields.Datetime.now()
         for rec in self:
@@ -29,7 +29,7 @@ class Task(models.Model):
             if sorted_list:
                 rec.next_event_id = sorted_list[0].id
             else:
-             rec.next_event_id = 0
+             rec.next_event_id = False
 
     @api.depends('calendar_event_ids','next_event_id')
     def _compute_nr_events(self):
